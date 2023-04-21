@@ -1,0 +1,39 @@
+# fly.toml app configuration file generated for winter-pond-7145 on 2023-04-21T16:08:24Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "winter-pond-7145"
+primary_region = "nrt"
+
+[build]
+  [build.args]
+    NODE_VERSION = "18"
+    PHP_VERSION = "8.1"
+
+[env]
+  APP_ENV = "production"
+  LOG_CHANNEL = "stderr"
+  LOG_LEVEL = "info"
+  LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
+  APP_URL = "https://winter-pond-7145.fly.dev"
+  APP_NAME = "tasklist"
+  APP_DEBUG = false
+  DB_CONNECTION = "pgsql"
+  DB_HOST = "db.mafixnnqwsqidxwcqrwg.supabase.co"
+  DB_PORT = 5432
+  DB_DATABASE = "postgres"
+  DB_USERNAME = "postgres"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+
+[checks]
+  [checks.alive]
+    type = "tcp"
+    interval = "15s"
+    timeout = "2s"
+    grace_period = "5s"
