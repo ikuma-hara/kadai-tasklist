@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for winter-pond-7145 on 2023-04-21T16:08:24Z
+# fly.toml app configuration file generated for icy-cloud-3625 on 2023-04-28T16:40:31Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "winter-pond-7145"
+app = "icy-cloud-3625"
 primary_region = "nrt"
 
 [build]
@@ -16,14 +16,6 @@ primary_region = "nrt"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
-  APP_URL = "https://winter-pond-7145.fly.dev"
-  APP_NAME = "tasklist"
-  APP_DEBUG = false
-  DB_CONNECTION = "pgsql"
-  DB_HOST = "db.mafixnnqwsqidxwcqrwg.supabase.co"
-  DB_PORT = 5432
-  DB_DATABASE = "postgres"
-  DB_USERNAME = "postgres"
 
 [http_service]
   internal_port = 8080
