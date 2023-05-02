@@ -12,10 +12,18 @@ primary_region = "nrt"
     PHP_VERSION = "8.1"
 
 [env]
-  APP_ENV = "production"
+  APP_ENV = "https://winter-pond-7145.fly.dev"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
+  APP_NAME = "Tasklist"
+  APP_DEBUG = false
+  DB_CONNECTION = "pgsql"
+  DB_HOST = "db.mafixnnqwsqidxwcqrwg.supabase.co"
+  DB_PORT = 5432
+  DB_DATABASE = "postgres"
+  DB_USERNAME = "postgres"
+  
 
 [http_service]
   internal_port = 8080
